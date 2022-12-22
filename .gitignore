@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Editors and IDEs
+.idea/
+
+# Misc
+.DS_Store

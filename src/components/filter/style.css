@@ -1,0 +1,101 @@
+form {
+	background: #363636;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto 4rem;
+	padding: 2em;
+	text-align: left;
+	font-size: 16px;
+}
+
+form .header {
+	color: #e6e6e6;
+	font-family: sans-serif;
+	font-size: 1em;
+	letter-spacing: 1px;
+	margin-bottom: 1em;
+}
+
+#easy + label:before {
+	background-color: #80c080;
+}
+
+#medium + label:before {
+	background-color: #ffd280;
+}
+
+#hard + label:before {
+	background-color: #ff8080;
+}
+
+.filter {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+}
+.filter-input:checked + .filter-button {
+	padding-left: 2.625em;
+}
+.filter-input:checked + .filter-button:before {
+	width: 2.25em;
+}
+.filter-input:checked + .filter-button:after {
+	background-color: #fff;
+	content: "✔";
+	display: block;
+}
+.filter-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+.filter-button {
+	transition: padding 200ms ease-out 100ms;
+	background-color: #fff;
+	border-radius: 6px;
+	display: inline-block;
+	margin-right: 0.5em;
+	min-width: 9em;
+	overflow: hidden;
+	padding: 0.375em;
+	padding-left: 2.15em;
+	position: relative;
+}
+.filter-button ~ .filter-button {
+	margin-top: 0.25em;
+}
+.filter-button:before, .filter-button:after {
+	content: "";
+	display: block;
+}
+.filter-button:before {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	bottom: 0px;
+	left: 0px;
+	transition: width 200ms ease-out;
+	width: 5px;
+}
+.filter-button:after {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	left: 0.75em;
+	height: 0.75em;
+	width: 0.75em;
+	background-color: #ddd;
+	box-shadow: inset 0 1px #ccc;
+	border-radius: 3px;
+	color: #555;
+	line-height: 0.8em;
+	margin-top: -0.375em;
+	text-indent: 1px;
+}
