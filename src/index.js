@@ -32,5 +32,5 @@ const onChange = ({target}) => {
 
 const app = document.createElement('div');
 app.append(Filter(onChange));
-app.append(Cards(6));
+app.append(Cards());
 document.body.append(app);
